@@ -17,9 +17,10 @@ func _input(event: InputEvent) -> void:
 
 func try_move(mx,my):
 	var destine_pos = player_node.tile_pos + Vector2(mx,my)
+	player_node.look_to_xpos(destine_pos.x)
 	var is_tile_free = MapManager.is_tile_free(destine_pos.x, destine_pos.y)
 	if is_tile_free:
 		player_node.move_tile_to(mx,my)
 	else:
-		var dir = Vector2(mx,my)*32
+		var dir = Vector2(mx,my)*16
 		EffectManager.move_yoyo(player_node, dir)

@@ -1,7 +1,10 @@
 extends Node
 
 @onready var tilemap: TileMapLayer
-const FREE_TILES = ["a1x1"]
+const TILE_DEF = {
+	"a1x0":{"type":"wall", "walkeable": false},
+	"a1x1":{"type":"floor", "walkeable": true}
+}
 
 func initialize_map_manager(_tile_map):
 	tilemap = _tile_map
@@ -46,8 +49,8 @@ func is_tile_free(tx,ty):
 		return false
 	var atlas_coords = tilemap.get_cell_atlas_coords(tile_pos)
 	var atlas_key = "a"+str(atlas_coords.x)+"x"+str(atlas_coords.y)
-	print(tile_pos,"->",atlas_key,">",source_id,": ",atlas_key in FREE_TILES)
-	if atlas_key in FREE_TILES:
-		return true
+	#print(tile_pos,"->",atlas_key,">",source_id,": ",atlas_key in FREE_TILES)
+	if atlas_key in TILE_DEF:
+		return TILE_DEF[atlas_key]["walkeable"]
 	else:
 		return false
