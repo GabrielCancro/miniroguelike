@@ -1,6 +1,7 @@
 extends Node
 
 @onready var tilemap: TileMapLayer
+const FREE_TILES = ["a2x1"]
 
 func initialize_map_manager(_tile_map):
 	tilemap = _tile_map
@@ -29,3 +30,18 @@ func _process(delta):
 		print("Source:", source_id)
 		print("Atlas:", atlas_coords)
 		print("Alternative:", alternative)
+
+
+func cs(tx,ty):
+	var cell = tilemap.get_cell_source_id(Vector2(tx,ty))
+	var source_id = tilemap.get_cell_source_id(cell)
+	if source_id == -1:
+		return false
+		print("No hay tile")
+		return
+	var atlas_coords = tilemap.get_cell_atlas_coords(cell)
+	var atlas_key = "a"+str(atlas_coords.x)+"x"+str(atlas_coords.x)
+	if atlas_key in FREE_TILES:
+		return true
+	else:
+		return false
