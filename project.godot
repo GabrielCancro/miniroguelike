@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 MapManager="*uid://jikq4j7ytuwm"
 PlayerManager="*uid://ftmph08c24re"
 EffectManager="*uid://cve5pgh6chbeo"
+EnemyManager="*uid://bqs0ha5ea4n37"
+Pathfinding="*uid://dc84b2akpq70p"
 
 [display]
 

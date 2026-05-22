@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ori60jrrojvd" path="res://assets/tileset.png" id="1_ibkli"]
 [ext_resource type="Script" uid="uid://d2m217r1cvqrd" path="res://scenes/Game.gd" id="1_qbsmt"]
 [ext_resource type="PackedScene" uid="uid://clpdv0uowfaex" path="res://nodes/Player.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://biy0juh7xqabg" path="res://nodes/Enemy.tscn" id="5_s0nni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qbsmt"]
 texture = ExtResource("1_ibkli")
@@ -120,3 +121,13 @@ tile_map_data = PackedByteArray("AAABAAEAAAABAAAAAAAKAAEAAAABAAAAAAAJAAEAAAABAAA
 tile_set = SubResource("TileSet_cpr0p")
 
 [node name="Player" parent="." unique_id=1049695885 instance=ExtResource("3_cpr0p")]
+
+[node name="Enemy" parent="." unique_id=2034148830 instance=ExtResource("5_s0nni")]
+position = Vector2(424.99997, 291.99997)
+scale = Vector2(0.4, 0.4)
+hframes = 4
+
+[node name="Button" type="Button" parent="." unique_id=426172139]
+offset_right = 120.0
+offset_bottom = 43.0
+text = "MOVE ENEMIES"
