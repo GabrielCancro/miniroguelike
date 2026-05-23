@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c5ogu8m6xdbuk"]
+
+[ext_resource type="Script" uid="uid://e0ox0pi38id8" path="res://nodes/UI.gd" id="1_vuwep"]
+
+[node name="UI" type="Control" unique_id=1303331083]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vuwep")
+
+[node name="Label2" type="Label" parent="." unique_id=901934675]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -79.5
+offset_top = 24.0
+offset_right = 79.5
+offset_bottom = 58.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "PLAYER TURN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1562800475]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 22.0
+offset_right = 973.0
+offset_bottom = 425.0
+color = Color(0, 0, 0, 0.7058824)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=225209063]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "ASDA
+ASDA
+ASDA
+ASDA
+ASDA
+ASDA
+ASDA
+ASDA
+ASDA
+ASDA"
+vertical_alignment = 1

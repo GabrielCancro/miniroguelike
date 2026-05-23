@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ori60jrrojvd" path="res://assets/tileset.png" id="1_ibkli"]
 [ext_resource type="Script" uid="uid://d2m217r1cvqrd" path="res://scenes/Game.gd" id="1_qbsmt"]
 [ext_resource type="PackedScene" uid="uid://clpdv0uowfaex" path="res://nodes/Player.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://c5ogu8m6xdbuk" path="res://nodes/UI.tscn" id="5_aug50"]
 [ext_resource type="PackedScene" uid="uid://biy0juh7xqabg" path="res://nodes/Enemy.tscn" id="5_s0nni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qbsmt"]
@@ -131,3 +132,11 @@ hframes = 4
 offset_right = 120.0
 offset_bottom = 43.0
 text = "MOVE ENEMIES"
+
+[node name="UI" parent="." unique_id=1303331083 instance=ExtResource("5_aug50")]
+custom_minimum_size = Vector2(1000, 500)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1

@@ -33,6 +33,7 @@ func look_to_xpos(xpos):
 func add_stat(stat_key, value):
 	data[stat_key] += value
 	print(stat_key,"->",data[stat_key])
+	if data["hp"]<=0: dead()
 	return data[stat_key]
 
 func get_stat(stat_key):
@@ -40,3 +41,8 @@ func get_stat(stat_key):
 
 func restore_mov():
 	add_stat("mov",data["movm"]-data["mov"])
+
+func dead():
+	data["hp"]=0
+	EnemyManager.ENEMIES.erase(self)
+	queue_free()

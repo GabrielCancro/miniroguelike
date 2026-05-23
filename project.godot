@@ -22,6 +22,7 @@ PlayerManager="*uid://ftmph08c24re"
 EffectManager="*uid://cve5pgh6chbeo"
 EnemyManager="*uid://bqs0ha5ea4n37"
 Pathfinding="*uid://dc84b2akpq70p"
+GameManager="*uid://dt0ob2ipimynx"
 
 [display]
 
